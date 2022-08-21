@@ -1,0 +1,117 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	background: url(https://webfon.top/wp-content/uploads/2016/11/kokteil-1.jpg) left top repeat;
+	background-attachment: fixed; /*обои стоят на месте а текст движется*/
+}
+/*Общие стили для разметки*/
+.container{
+	width: 80%;
+	margin-top: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+/*display: inline; - элемент строчный*/	
+/*display: block; - элемент блочный*/		
+/*display: inline-block; - элемент строчно-блочный*/		
+/*решетка - селектор id*/		
+/*селектор id круче чем класс*/		
+#profile{
+	/*background: red;*/
+}
+#social{
+	text-align: right;
+	margin: 0;
+}
+/* > - выбирает только те элементы, которые ынутри 
+определенного элемента (в данном случае li, которые внутри)*/			
+		
+#social>li{
+	display: inline-block;
+}
+/*рядок, который будет убирать подтекание (owerflow) колонок (float)*/
+.row{
+	overflow: hidden;
+}	
+
+
+
+
+.col{
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;/*css3 заправить padding*/
+}
+
+
+.col-40{
+	width: 40%;
+	overflow: hidden;
+}
+
+.col-60{
+	width: 60%;
+}
+.col-30{
+	width: 30%;
+	overflow: hidden;
+}
+
+
+.round{
+	background: aqua;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    margin: 0 auto;
+	overflow: hidden; /*прячет выступающую за края кружочка часть внутренней картинки*/
+	position: relative;
+	border: 6px solid #ccc;
+}	
+.round>img{
+	width: 1684px;
+    left: -814px;
+    top: -254px;
+    position: absolute;
+}
+
+
+
+
+
+section{
+	background: rgba(0,0,0,0.6);/*rgba фон чорного с прозрачностью*/
+}
+/* Типографика*/
+.heading{
+		font-family: 'Roboto Slab', serif;
+		margin: 0;
+		color: whitesmoke;
+}
+	
+.title{
+	text-align: center;
+	color: whitesmoke;
+}
+section p{
+	color: #bbb;
+}
+.icon{
+	color: #fff;
+	background: blue;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 0 auto;
+	overflow: hidden; /*прячет выступающую за края кружочка часть внутренней картинки*/
+	position: relative;
+}
+.icon>i{
+    width: 18px;
+    left: 5px;
+    top: 8px;
+    position: absolute;
+}
+#services{
+	text-align: center;
+	margin: 0;
+}
