@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Расход топлива</title>
+	<script language="javascript" type="text/javascript">
+		function display() {
+			toplivo=document.form1.toplivo.value;
+			km=document.form1.km.value;
+			litr1=Math.round(toplivo/km*10000)/100;
+			alert(litr1+" л/км");
+		}
+	</script>
+	<style type="text/css">
+		body {
+			background-image: url("filling-station-1839760__340.jpg");
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-color: rgba(0,0,0,0.5);
+			text-align: center;
+			font-size: 40px;
+			color: #fff;
+		}
+		table {
+			font-size: 40px;
+			margin: 0 auto;
+		}
+		table td{
+			height: 100px;
+		}
+		table input{
+			font-size: 40px;
+			
+		}
+	</style>
+</head>
+<body>
+<h1>Расход топлива</h1>
+<form class="form1" name="form1">
+    <table>
+        <tr> 
+            <td align="right"><b>Колличесто залитого топлива</b></td>
+            <td><input type="text" size=5 name="toplivo">л.</td>
+        </tr>
+        <tr>
+            <td align="right"><b>Пройденное расстояние</b></td>           
+            <td><input type="text" size=5 name="km">км.</td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td align="left"><input type="button" value="Расчитать" onclick="display()"></td>
+            
+        </tr>
+   </table> 
+</form>
+</body>
+</html>

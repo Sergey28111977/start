@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html>
+<head>
+ 
+<title>Угадай число</title>
+  <style>
+   body {
+    background: #fff; /* Цвет фона */
+    color: #000; /* Цвет текста */
+   }
+  </style>
+<script language="javascript" type="text/javascript">
+var num=Math.floor(Math.random()*100+1);
+var tries=0;
+function guessit()
+{
+var guess=document.form1.guess1.value;
+tries++;
+status=tries+" попытка"; <!-- Вывод колличества попыток в низу браузера -->
+if (guess<num) document.form1.hint.value="Больше";
+if (guess>num) document.form1.hint.value="Меньше";
+if (guess==num)
+    {
+    window.alert("Правильно, "+first+"!!!\n Вы угадали из "+tries+" попыток");
+    location.reload();
+    }
+if (tries==10)
+    {
+    window.alert("Очень жаль "+first+"!!!\n Вы не угадали. Правильное число: "+num);
+    location.reload();
+    }
+document.form1.pop.value=tries;
+<!--document.form2.text2.value='"0"\n-|-\n./\\.'; Рисеум человечека-->
+if (tries==1) document.form2.text2.value='"';
+if (tries==2) document.form2.text2.value='"0';
+if (tries==3) document.form2.text2.value='"0"';
+if (tries==4) document.form2.text2.value='"0"\n-';
+if (tries==5) document.form2.text2.value='"0"\n-|';
+if (tries==6) document.form2.text2.value='"0"\n-|-';
+if (tries==7) document.form2.text2.value='"0"\n-|-\n.';
+if (tries==8) document.form2.text2.value='"0"\n-|-\n./';
+if (tries==9) document.form2.text2.value='"0"\n-|-\n./\\';
+if (tries==10) document.form2.text2.value='"0"\n-|-\n./\\.';
+}
+</script>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+//Ввод данных
+first=prompt("Введите ваше имя");
+document.write("<h1>Привет "+first+"</h1>");
+</script>
+<table width="100%" cellpadding="5"><!--Делим на два столбца-->
+    <tr>
+    <td valign="top" width="50%" bgcolor="#f022f0"><!--Первый столбец-->
+        <p>Я загадал число от 1 до 100. Попробуй его угадай из 10 попыток</p>
+        <form name="form1">
+        <input type="text" size="10" name="hint" value="Ваше число"><br>
+        <input type="text" size="10" name="pop" value="Попытки"> попытка
+        <br>
+        <b>Правильное число:</b>
+        <input type="text" name="guess1" size="5"><br>
+        <input type="button" value="Угадать" onclick="guessit();"> 
+        </form> 
+    </font></i></b>
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" width="50%" bgcolor="#ffcc00"><!--Второй столбец-->
+        <form name="form2">
+            <textarea name="text2" rows="3" cols="10">
+            </textarea>           
+        </form> 
+    </td>
+   </tr>
+   
+</table>
+</body>
+</html>
