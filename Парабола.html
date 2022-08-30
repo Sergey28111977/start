@@ -1,0 +1,101 @@
+﻿<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Парабола</title>
+    <style>
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #aaa; display: block; margin: 0 auto; }
+    </style>
+	<script>
+		function display()
+		{
+				
+				var canvas = document.getElementById("myCanvas");
+				var ctx = canvas.getContext("2d");
+				var x = canvas.width/2;
+				var y = canvas.height/2;
+				var a=document.form1.a.value;
+				var b=document.form1.b.value;
+				var c=document.form1.c.value;
+				var m=document.form1.m.value;
+		
+				ctx.clearRect(0, 0, canvas.width, canvas.height);// Очистка экрана
+			
+			 xp=-b/2*a;
+			 yp = a*xp*xp+b*xp+c*1;
+			 
+			alert("a="+a+" b="+b+" c="+c+" xp="+xp+" yp="+yp+" m="+m);
+			 
+			/*
+			ctx.beginPath();
+			ctx.arc(xp+x, yp+y, 1, 0, Math.PI*2, false);
+			ctx.fillStyle = "000000";
+			ctx.fill();
+			ctx.closePath();
+			*/
+			
+			ctx.beginPath();
+			ctx.moveTo(0,y);
+			ctx.lineTo(canvas.width,y);	
+			ctx.moveTo(x,0);
+			ctx.lineTo(x,canvas.height);
+			ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+			ctx.stroke();
+			ctx.closePath();
+			
+			for (i=0; i<=100; i++)
+				{
+				xp=(xp+i)/m;
+				yp = -(a*xp*xp+b*xp+c*1)/m;
+				
+				ctx.beginPath();
+				ctx.arc(xp+x, yp+y, 1, 0, Math.PI*2, false);
+				ctx.fillStyle = "000000";
+				ctx.fill();
+				ctx.closePath();
+				}
+			for (i=0; i<=100; i++)
+				{
+				xp=(xp-i)/m;
+				yp = -(a*xp*xp+b*xp+c*1)/m;
+				
+				ctx.beginPath();
+				ctx.arc(xp+x, yp+y, 1, 0, Math.PI*2, false);
+				ctx.fillStyle = "000000";
+				ctx.fill();
+				ctx.closePath();
+				}
+		
+
+			
+						
+
+			//setInterval(draw, 10);
+		}
+	</script>
+</head>
+<body>
+	<h1>ax<sup>2</sup>+bx+c=0;</h1>
+	<form name="form1" action="mailto:slow1@ukr.net" enctype="text/plain">
+		<b>a:</b><input type="text" length="10" name=a>
+		<p>
+		<b>b:</b><input type="text" length="10" name=b>
+		<p>
+		<b>c:</b><input type="text" length="10" name=c>
+		<p>
+		<b>Масштаб:</b><input type="text" length="10" name=m>
+		<p>
+		<input type="button" value="Display" onclick="display();">
+		<p>
+	</form>
+	<canvas id="myCanvas" width="480" height="320"></canvas>
+<b>Парабола</b> — это график функции описанный формулой ax<sup>2</sup>+bx+c=0.<br>
+Чтобы построить параболу нужно следовать простому алгоритму действий:<br>
+1 ) Формула параболы y=ax<sup>2</sup>+bx+c,<br>
+если а>0 то ветви параболы направленны вверх,<br>
+а<0 то ветви параболы направлены вниз.<br>
+Свободный член c эта точке пересекается параболы с осью OY;<br>
+
+</body>
+</body>
+</html>
