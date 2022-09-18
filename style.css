@@ -2,6 +2,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	background: url(matrix-356024_1280.jpg) left top repeat;
 	background-attachment: fixed; /*обои стоят на месте а текст движется*/
+	text-align: center;
 }
 /*Общие стили для разметки*/
 .container{
@@ -33,15 +34,11 @@ body{
 	overflow: hidden;
 }	
 
-
-
-
 .col{
 	float: left;
 	padding: 10px;
 	box-sizing: border-box;/*css3 заправить padding*/
 }
-
 
 .col-40{
 	width: 40%;
@@ -51,32 +48,27 @@ body{
 .col-60{
 	width: 60%;
 }
+
 .col-30{
 	width: 30%;
-	overflow: hidden;
 }
-
 
 .round{
 	background: aqua;
-    width: 150px;
-    height: 150px;
-    border-radius: 75px;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
     margin: 0 auto;
 	overflow: hidden; /*прячет выступающую за края кружочка часть внутренней картинки*/
 	position: relative;
 	border: 6px solid #ccc;
 }	
 .round>img{
-	width: 1684px;
-    left: -814px;
-    top: -254px;
+	width: 372px;
+    left: -49px;
+    top: -79px;
     position: absolute;
 }
-
-
-
-
 
 section{
 	background: rgba(0,0,0,0.6);/*rgba фон чорного с прозрачностью*/
@@ -93,25 +85,50 @@ section{
 	color: whitesmoke;
 }
 section p{
-	color: #bbb;
+	color: white;
 }
-.icon{
-	color: #fff;
-	background: blue;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    margin: 0 auto;
-	overflow: hidden; /*прячет выступающую за края кружочка часть внутренней картинки*/
-	position: relative;
-}
-.icon>i{
-    width: 18px;
-    left: 5px;
-    top: 8px;
-    position: absolute;
-}
+
 #services{
 	text-align: center;
 	margin: 0;
+	
 }
+
+#services a{
+	color: white;
+}
+
+/*Выпадающее меню*/
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {background-color: #3e8e41;} 
