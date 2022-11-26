@@ -88,6 +88,10 @@ section p{
 	color: white;
 }
 
+#about a{
+	color: white;
+}
+
 #services{
 	text-align: center;
 	margin: 0;
