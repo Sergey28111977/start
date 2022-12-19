@@ -1,9 +1,35 @@
+/* Скрываем "не тот" язык */
+.en .ru, .ru .en  {
+  display: none;
+}
+
+/* Переключалки языка */
+.lang-switcher {
+ border-bottom: 1px dashed;
+ cursor: pointer;
+ 
+}
+.lang-switcher:hover {
+  color: #b33;
+}
+
+/* Выделяем активную переключалку тоже с помощью классов родителя */
+.en .lang-switcher--en,
+.ru .lang-switcher--ru {
+ 	color: white;
+  border-bottom: none;
+  font-weight: bold;
+  cursor: default;
+}
+
 body{
 	font-family: 'Open Sans', sans-serif;
 	background: url(matrix-356024_1280.jpg) left top repeat;
 	background-attachment: fixed; /*обои стоят на месте а текст движется*/
 	text-align: center;
+	color: white;
 }
+
 /*Общие стили для разметки*/
 .container{
 	width: 80%;
@@ -81,7 +107,7 @@ section{
 .heading{
 		font-family: 'Roboto Slab', serif;
 		margin: 0;
-		color: whitesmoke;
+
 }
 	
 .title{

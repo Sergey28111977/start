@@ -2,48 +2,100 @@
 <html><!--начало-->
 	<head>
 		<meta charset="utf-8">
-		<title>Резюме</title>		
+
+ 		 <!-- Заголовок в зависимости от языка -->
+		<title>Резюме</title>	
+  		<meta name="title-ru" content="Резюме" id="title-ru">
+ 		 <meta name="title-en" content="CV" id="title-en">
+
 		<link rel="stylesheet" href="style.css">
+		
 	</head><!-- голова-->
-	<body>
+	<body class="ru">
 		<div class="container"><!--SOCIAL-->
 						
 				<!--PROFILE-->
 			
 				<section id="profie">
-					<h1 class="heading">Профиль</h1>
 
-					
+					<div class="ru" lang="ru">
+						<h1 class="heading">Профиль</h1>
+					</div>
+
+						 <div class="en" lang="en">
+						 	<h1 class="heading">Profile</h1>
+						 </div>
+
+					<div  align="right">
+					  <span class="lang-switcher lang-switcher--ru" id="switcher-ru">RU</span>
+					  <span class="lang-switcher lang-switcher--en" id="switcher-en">EN</span>
+					</div>
 
 					<div class="row">
 						<article id="photo" class="col col-30">
-							<h2 class="title">Сергей Пузанков</h2>
-							<h4 class="title">Frontend devloper</h4>
+
+							<div class="ru" lang="ru">
+								<h2 class="title">Сергей Пузанков</h2>
+								<h4 class="title">Frontend devloper</h4>
+							</div>
+
+								<div class="en" lang="en">
+									<h2 class="title">Sergey Puzankov</h2>
+									<h4 class="title">Frontend devloper</h4>
+								</div>
+
 							<div class="round"><img src="moto1.jpg" alt="">
 							</div>
 						</article>
 						
 						<article id="about" class="col col-30">
-							<h2 class="title"> Обо мне</h2>
-														
-							<div>
-								<p>ПРОГРАММИСТ</p>
-								<p>Знание языков JS, HTML, CSS </p>
-								<p>и фреймворка ReactJS </p>
-								<p>Опыт разработки на Opencart</p>
-								<a href="https://serhiis2.wordpress.com/">Копия Wordpress</a>
+							
+							<div class="ru" lang="ru">
+								<h2 class="title"> Обо мне</h2>
+								<div>						
+									<p>ПРОГРАММИСТ</p>
+									<p>Знание языков JS, HTML, CSS </p>
+									<p>и фреймворка ReactJS </p>
+									<p>Опыт разработки на Opencart</p>
+									<a href="https://serhiis2.wordpress.com/">Копия Wordpress</a>
+								</div>
 							</div>
+
+									<div class="en" lang="en">
+									<h2 class="title"> About me</h2>
+									<div>						
+										<p>PROGRAMMER</p>
+										<p>Knowledge of programming languages JS, HTML, CSS </p>
+										<p>and framework ReactJS </p>
+										<p>Development experience on Opencart</p>
+										<a href="https://serhiis2.wordpress.com/">Wordpress copy</a>
+									</div>
+								</div>
+
 						</article>
 						
 						<article id="about" class="col col-30">	
 							<!--Выпадающее меню-->
-							<div class="dropdown">		  						
-		  						<h2 class="title">Работа над машинами</h2>
-		  						<div class="dropdown-content">
-								    <a href="#">Атего кузов</a>
-								    <a href="#">Атего кабина</a>
-								    <a href="#">Фиат двигатель</a>
-							 	</div>
+							<div class="dropdown">	
+
+								<div class="ru" lang="ru">
+			  						<h2 class="title">Работа над машинами</h2>
+			  						<div class="dropdown-content">
+									    <a href="#">Атего кузов</a>
+									    <a href="#">Атего кабина</a>
+									    <a href="#">Фиат двигатель</a>
+								 	</div>
+								 </div>
+
+								 	<div class="en" lang="en">
+				  						<h2 class="title">Work on machines</h2>
+				  						<div class="dropdown-content">
+										    <a href="#">Atego body</a>
+										    <a href="#">Atego cabin</a>
+										    <a href="#">Fiat engine</a>
+									 	</div>
+								 </div>
+
 							</div>
 							<div>
 								<img src="Авто/Atego_1/Atego1.jpg"
@@ -74,31 +126,57 @@
 					</div>		
 					<div class="row">
 					<article id="services"  style="">
-						<h2 class="title">Мои продукты</h2>
-					
-					<ul id="services">
-						<li class="col col-25"><a href="https://sergey28111977.github.io/start/play15.html">Игра пятнашки</a>
-							<p>Описание игры: Начало игры, перемешиваем и собираем до изначального состояния.</p>
-						</li>
+						
+						<div class="ru" lang="ru">
+							<h2 class="title">Мои продукты</h2>
+						
+							<ul id="services">
+								<li class="col col-25"><a href="https://sergey28111977.github.io/start/play15.html">Игра пятнашки</a>
+									<p>Описание игры: Начало игры, перемешиваем и собираем до изначального состояния.</p>
+								</li>
 
-						<li class="col col-25"><a href="https://sergey28111977.github.io/start/Book.html">Записная книжка</a>
-							<p>Описание приложения: Добавляем записи после выполнения можно удалять.</p>
-						</li>
+								<li class="col col-25"><a href="https://sergey28111977.github.io/start/Book.html">Записная книжка</a>
+									<p>Описание приложения: Добавляем записи после выполнения можно удалять.</p>
+								</li>
 
-						<li class="col col-25"><a href="https://sergey28111977.github.io/start/fuel/index.html">Расход топлива для автомобиля</a>
-							<p>Описание приложения: Нужно заправлять топливо до отстрела пистолета. После пройденного расстояния опять заправляем до отстрела и вводим данные.</p>
-						</li>
+								<li class="col col-25"><a href="https://sergey28111977.github.io/start/fuel/index.html">Расход топлива для автомобиля</a>
+									<p>Описание приложения: Нужно заправлять топливо до отстрела пистолета. После пройденного расстояния опять заправляем до отстрела и вводим данные.</p>
+								</li>
 
-						<li class="col col-25"><a href="https://sergey28111977.github.io/start/five dots in a row.html">Игра 5 точек в ряд</a>
-							<p>Описание игры: Играют 2 игрока кто первый соберет пять точек подряд по горизонтали, вертикали или диагонали.</p>
-						</li>
+								<li class="col col-25"><a href="https://sergey28111977.github.io/start/five dots in a row.html">Игра 5 точек в ряд</a>
+									<p>Описание игры: Играют 2 игрока кто первый соберет пять точек подряд по горизонтали, вертикали или диагонали.</p>
+								</li>
+							</ul>
+						</div>
 
-					</ul>
+							<div class="en" lang="en">
+							<h2 class="title">My products</h2>
+						
+							<ul id="services">
+								<li class="col col-25"><a href="https://sergey28111977.github.io/start/play15.html">Fifteen game</a>
+									<p>Game description: The beginning of the game, mix and collect to its original state.</p>
+								</li>
+
+								<li class="col col-25"><a href="https://sergey28111977.github.io/start/Book.html">Notebook</a>
+									<p>Application description: We add records after execution can be deleted.</p>
+								</li>
+
+								<li class="col col-25"><a href="https://sergey28111977.github.io/start/fuel/index.html">Fuel consumption for car</a>
+									<p>Application Description: You need to refuel before the gun fires. After the distance traveled, we refuel again until the shooting and enter the data.</p>
+								</li>
+
+								<li class="col col-25"><a href="https://sergey28111977.github.io/start/five dots in a row.html">Game 5 dots in a row</a>
+									<p>Game description: Play 2 players who will be the first to collect five dots in a row horizontally, vertically or diagonally.</p>
+								</li>
+							</ul>
+						</div>
+
 					</div>
 					</article>
 				
 		
 				</section>
 		</div>
+		<script src="external.js"></script>
 	</body><!--тело-->
 </html><!--конец-->
