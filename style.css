@@ -103,16 +103,16 @@ body{
 section{
 	background: rgba(0,0,0,0.6);/*rgba фон чорного с прозрачностью*/
 }
+
 /* Типографика*/
 .heading{
 		font-family: 'Roboto Slab', serif;
 		margin: 0;
-
 }
 
 li {
     list-style-type: none; /* Убираем маркеры */
-   }
+}
 	
 .title{
 	text-align: center;
@@ -161,6 +161,15 @@ section p{
   display: block;
 }
 
+.scale {
+	width: 200px;
+	transition: 1s; /* Время эффекта */
+}
+
+.scale:hover {
+   transform: scale(1.3); /* Увеличиваем масштаб */
+}
+
 /* Изменение цвета выпадающих ссылок при наведении курсора */
 .dropdown-content a:hover {background-color: #0f8f0d;}
 
@@ -172,10 +181,11 @@ section p{
 
 /*Скрытие фото при размере экрана менее 1000рх*/
 @media (max-width: 1000px) {
-  .foto {
+.foto {
     display: none;
-  }
-  .container{
+}
+
+.container{
 	width: 100%;
 	margin-top: 0px;
 }
