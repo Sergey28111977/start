@@ -4,20 +4,35 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Фильмы</title>
+	<meta name="title-ru" content="Фильмы" id="title-ru">
+ 	<meta name="title-en" content="Films" id="title-en">
 	<link rel="stylesheet" type="text/css" href="theme.css">
 </head>
-<body>
+<body class="ru">
 
 	<div class="container">
+		<div  align="right">
+			<span class="lang-switcher lang-switcher--ru" id="switcher-ru">RU</span>
+			<span class="lang-switcher lang-switcher--en" id="switcher-en">PL</span>
+		</div>
 		<div class="card">
-			Możesz przesłać dowolne pliki .mp4. Po najechaniu kursorem na obraz wyświetlana jest nazwa i rozmiar.
+
+			<div class="ru" lang="ru">
+				Вы можете загружать любые файлы .mp4. При наведении курсора на изображение отображается название и размер.
+				
+			</div>
+
+				<div class="en" lang="en">
+					Możesz przesłać dowolne pliki .mp4. Po najechaniu kursorem na obraz wyświetlana jest nazwa i rozmiar.
+				</div>
+			
 			<input type="file" id="file">
 			<!--<button class="btn">Открыть</button>
 			<button class="btn primary">Загрузить</button>-->
 		</div>
 	</div>
 
-
+<script src="../../external.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

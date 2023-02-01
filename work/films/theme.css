@@ -1,3 +1,27 @@
+/* Скрываем "не тот" язык */
+.en .ru, .ru .en  {
+  display: none;
+}
+
+/* Переключалки языка */
+.lang-switcher {
+ border-bottom: 1px dashed;
+ cursor: pointer;
+ 
+}
+.lang-switcher:hover {
+  color: #b33;
+}
+
+/* Выделяем активную переключалку тоже с помощью классов родителя */
+.en .lang-switcher--en,
+.ru .lang-switcher--ru {
+ 	color: white;
+  border-bottom: none;
+  font-weight: bold;
+  cursor: default;
+}
+
 body {	
 	background-image: url(kinoplenka.jpg);
 	background-attachment: fixed;
@@ -60,7 +84,6 @@ input[type=file] {
 	margin: 0 auto;
 	margin-bottom: .5rem;
 	overflow: hidden;
-
 }
 
 .preview-image video {
