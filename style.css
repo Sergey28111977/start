@@ -162,12 +162,13 @@ section p{
 }
 
 .scale {
-	width: 200px;
+	width: 200px;	
 	transition: 1s; /* Время эффекта */
 }
 
 .scale:hover {
   transform: scale(1.5); /* Увеличиваем масштаб */
+  box-shadow: 15px 15px 20px 5px #333;
 }
 
 /* Изменение цвета выпадающих ссылок при наведении курсора */
