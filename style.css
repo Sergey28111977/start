@@ -42,9 +42,9 @@ body{
 /*display: inline-block; - элемент строчно-блочный*/		
 /*решетка - селектор id*/		
 /*селектор id круче чем класс*/		
-#profile{
-	/*background: red;*/
-}
+/*#profile{
+	background: red;
+}*/
 #social{
 	text-align: right;
 	margin: 0;
@@ -162,7 +162,7 @@ section p{
 }
 
 .scale {
-	width: 200px;	
+	width: 150px;	
 	transition: 1s; /* Время эффекта */
 }
 
@@ -189,4 +189,5 @@ section p{
 .container{
 	width: 100%;
 	margin-top: 0px;
+}
 }
