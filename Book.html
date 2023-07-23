@@ -70,12 +70,8 @@ const engWord = document.getElementById('eng'),
 	  addButton = document.getElementById('add-word-btn'),
 	  table = document.getElementById('table');
 
-let words,
+let words = 0,
     btnsDelete;
-
-if (typeof words !== 'undefined') {
-	// Теперь мы знаем, что foo определено.
-}
 
 localStorage.length < 1 ? words = [] : words = JSON.parse(localStorage.getItem('words'));
 
