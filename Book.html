@@ -70,8 +70,7 @@ const engWord = document.getElementById('eng'),
 	  addButton = document.getElementById('add-word-btn'),
 	  table = document.getElementById('table');
 
-var words = [],
-    btnsDelete;
+var btnsDelete;
 
 localStorage.length < 1 ? words = [] : words = JSON.parse(localStorage.getItem('words'));
 
