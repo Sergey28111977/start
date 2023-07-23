@@ -74,7 +74,7 @@ var words,
     btnsDelete;
 
 localStorage.length < 1 ? words = [] : words = JSON.parse(localStorage.getItem('words'));
-
+console.log(words);
 const addWordToTable = index => {
 	table.innerHTML += `
 		<tr class="tr">
@@ -86,11 +86,11 @@ const addWordToTable = index => {
 		</tr>
 	`
 }
-
+console.log(words);
 words.forEach((element, i) => {
 	addWordToTable(i);
-})
-
+});
+console.log(words);
 function CreateWord (english, russian) {
 	this.english = english;
 	this.russian = russian;
