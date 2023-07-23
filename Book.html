@@ -70,11 +70,13 @@ const engWord = document.getElementById('eng'),
 	  addButton = document.getElementById('add-word-btn'),
 	  table = document.getElementById('table');
 
-var words,
+var words = [],
     btnsDelete;
 
 localStorage.length < 1 ? words = [] : words = JSON.parse(localStorage.getItem('words'));
+
 console.log(words);
+
 const addWordToTable = index => {
 	table.innerHTML += `
 		<tr class="tr">
@@ -85,7 +87,7 @@ const addWordToTable = index => {
 			</td>
 		</tr>
 	`
-}
+};
 console.log(words);
 words.forEach((element, i) => {
 	addWordToTable(i);
