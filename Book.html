@@ -73,9 +73,11 @@ const engWord = document.getElementById('eng'),
 let words,
     btnsDelete;
 
-if (typeof words !== 'null') {
-	localStorage.length < 1 ? words = [] : words = JSON.parse(localStorage.getItem('words'));
+if (typeof words !== 'undefined') {
+	// Теперь мы знаем, что foo определено.
 }
+
+localStorage.length < 1 ? words = [] : words = JSON.parse(localStorage.getItem('words'));
 
 const addWordToTable = index => {
 	table.innerHTML += `
