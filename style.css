@@ -40,14 +40,7 @@ body{
 #profie {
 	padding: 20px;
 }
-/*display: inline; - элемент строчный*/	
-/*display: block; - элемент блочный*/		
-/*display: inline-block; - элемент строчно-блочный*/		
-/*решетка - селектор id*/		
-/*селектор id круче чем класс*/		
-/*#profile{
-	background: red;
-}*/
+
 #social{
 	text-align: right;
 	margin: 0;
@@ -121,6 +114,11 @@ li {
 	text-align: center;
 	color: whitesmoke;
 }
+
+h3 span {
+	color: yellow;
+}
+
 section p{
 	color: white;
 }
@@ -211,22 +209,6 @@ section p{
 
 .skills__body-blocks p {
 	font-weight: 700;
-}
-/*Скрытие фото при размере экрана менее 1000рх*/
-@media (max-width: 1250px) {
-	.foto {
-		display: none;
-	}
-
-	.container{
-		width: 100%;
-		margin-top: 0px;
-	}
-/*
-	.scale {
-		width: 125px;	
-		transition: 1s; /* Время эффекта */
-	/*}*/
 }
 
 @media only screen and (max-width: 1005px) {
