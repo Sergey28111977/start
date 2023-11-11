@@ -32,10 +32,13 @@ body{
 
 /*Общие стили для разметки*/
 .container{
-	width: 80%;
-	margin-top: 100px;
-	margin-right: auto;
-	margin-left: auto;
+	/* width: 80%; */
+	margin-top: 50px;
+	margin: 50px auto;
+}
+
+#profie {
+	padding: 20px;
 }
 /*display: inline; - элемент строчный*/	
 /*display: block; - элемент блочный*/		
@@ -137,6 +140,9 @@ section p{
 	color: white;
 }
 
+.about_me {
+	line-height: 1.5;
+}
 /*Выпадающее меню*/
 
 /* Контейнер <div> - необходим для размещения выпадающего содержимого */
@@ -181,6 +187,31 @@ section p{
 /* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
 .dropdown:hover .dropbtn {background-color: #3e8e41;} 
 
+.skills__body {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.skills__body-blocks {
+	margin: 10px;
+}
+
+.skills__body-block__img {
+	width: 72px;
+	min-height: 92px;
+	margin: 0 auto;
+}
+
+.skills__body-block__img img {
+	width: 100%;
+	height: 100%;
+}
+
+.skills__body-blocks p {
+	font-weight: 700;
+}
 /*Скрытие фото при размере экрана менее 1000рх*/
 @media (max-width: 1250px) {
 	.foto {
@@ -205,5 +236,12 @@ section p{
 	
 	.col-25{
 		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 374px) {
+	.round {
+		max-width: 200px;
+		height: 200px;
 	}
 }
