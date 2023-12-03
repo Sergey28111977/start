@@ -33,8 +33,7 @@ body{
 /*Общие стили для разметки*/
 .container{
 	/* width: 80%; */
-	margin-top: 50px;
-	margin: 50px auto;
+	margin: 30px auto;
 }
 
 #profie {
@@ -149,6 +148,10 @@ section p{
   display: inline-block;
 }
 
+.dropdown .title {
+	margin-bottom: 0;
+}
+
 /* Выпадающее содержимое (скрыто по умолчанию) */
 .dropdown-content {
   display: none;
@@ -157,6 +160,8 @@ section p{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(68, 219, 91, 0.89);
   z-index: 1;
+  overflow-y: auto;
+  max-height: 490px;
 }
 
 /* Ссылки внутри выпадающего списка */
@@ -211,6 +216,16 @@ section p{
 	font-weight: 700;
 }
 
+.picture {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	max-height: 490px;
+	overflow-y: auto;
+	justify-content: space-evenly;
+	padding: 19.92px;
+}
+
 @media only screen and (max-width: 1005px) {
 	.col-30{
 		width: 100%;
@@ -218,6 +233,11 @@ section p{
 	
 	.col-25{
 		width: 100%;
+	}
+
+	.picture {
+		max-height: none;
+		overflow-y: inherit;
 	}
 }
 
