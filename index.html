@@ -275,27 +275,27 @@
 
 		<div class="block_news" id="app">
 			<hr/>
-			<ul>	
-				<li v-for="{ status, totalResults, articles } in commits">
-					
-					 <div v-for="(totalResults, i) in commits.articles.length"> 
-						<a :href="`${commits.articles[i].url}`" class="panel">
-        
-							<div class="flex-grow-0">
-							  <img :src="`${commits.articles[i].urlToImage}`" alt="">
-							</div>
-							<div class="flex-grow-1">
-							  <p>{{ commits.articles[i].title }}</p> <br>
-							  <p>{{ commits.articles[i].description }}</p>
-							</div>
-							<div class="flex-grow-2">
-							  <p>{{ formatDate(commits.articles[i].publishedAt.slice(0, 16)) }}</p><br>
-							  <p>{{ commits.articles[i].author }}</p>
-							</div>
-						</a>
-					</div> 
+			<ul>
+				<li v-for="{ results, url, title, body} in commits">
+				  <div v-for=" i in 5 " class="row">
+					<a :href="`${results[i-1].url}`" class="panel">
+				  
+					  <div class="flex-grow-0">
+						<img :src="`${results[i-1].image}`" alt="">
+					  </div>
+					  <div class="flex-grow-1">
+						<p>{{ results[i-1].title }}</p> <br>
+						<p>{{ results[i-1].body }}</p>
+					  </div>
+					  <div class="flex-grow-2">
+						<p>{{ results[i-1].date }}</p>
+						<p>{{ results[i-1].time }}</p>
+						<p>{{ results[i-1].source.title }}</p>
+					  </div>
+					</a>
+				  </div>
 				</li>
-			</ul>		
+			  </ul>		
 		</div>
 
 
