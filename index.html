@@ -276,24 +276,24 @@
 		<div class="block_news" id="app">
 			<hr/>
 			<ul>	
-				<li v-for="( pagination) in commits">
-					<div v-for="( pagination, i) in commits.pagination.count" >
-				
-						<a :href="`${commits.data[i].url}`" class="panel">
+				<li v-for="{ status, totalResults, articles } in commits">
+					
+					 <div v-for="(totalResults, i) in commits.articles.length"> 
+						<a :href="`${commits.articles[i].url}`" class="panel">
         
 							<div class="flex-grow-0">
-							  <img :src="`${commits.data[i].image}`" alt="">
+							  <img :src="`${commits.articles[i].urlToImage}`" alt="">
 							</div>
 							<div class="flex-grow-1">
-							  <p>{{ commits.data[i].title }}</p> <br>
-							  <p>{{ commits.data[i].description }}</p>
+							  <p>{{ commits.articles[i].title }}</p> <br>
+							  <p>{{ commits.articles[i].description }}</p>
 							</div>
 							<div class="flex-grow-2">
-							  <p>{{ formatDate(commits.data[i].published_at.slice(0, 16)) }}</p><br>
-							  <p>{{ commits.data[i].author }}</p>
+							  <p>{{ formatDate(commits.articles[i].publishedAt.slice(0, 16)) }}</p><br>
+							  <p>{{ commits.articles[i].author }}</p>
 							</div>
 						</a>
-					</div>
+					</div> 
 				</li>
 			</ul>		
 		</div>
