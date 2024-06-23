@@ -23,9 +23,9 @@
 .en .lang-switcher--en,
 .ru .lang-switcher--ru {
  	color: white;
-  border-bottom: none;
-  font-weight: bold;
-  cursor: default;
+	border-bottom: none;
+	font-weight: bold;
+	cursor: default;
 }
 
 body{
